@@ -1,0 +1,13 @@
+Dziennik Zmian i Decyzji Projektowych (Changelog)
+
+Dokument ten śledzi najważniejsze iteracje i decyzje podjęte przez zespół projektowy w trakcie cyklu życia projektu Gyro.
+
+Wersja 1.1 (Final Release)
+[Hardware] Zmiana konfiguracji zasilania (Decyzja zespołu):** Zrezygnowano z koszyka na zwykłe ogniwa ze względu na brak wymaganej dynamiki prądowej. Zespół podjął decyzję o implementacji dedykowanego pakietu Li-Ion w konfiguracji 4S z systemem BMS 40A. Podniosło to napięcie robocze do ok. 14.8V-16.8V, znacząco poprawiając czas reakcji silników prądu stałego.
+[Software] Optymalizacja interwału pomiarowego (dt):** Funkcja `Serial.print()` wywoływana w głównej pętli powodowała wahania czasu wykonania. Dodano asynchroniczny timer ograniczający logowanie do interwału co 80 ms. Zapewniło to sztywny krok czasowy dt = 4 ms dla filtru komplementarnego.
+[Hardware] Elastyczny montaż BMS:** Zmiana montażu układu BMS na rzep w celu mechanicznego wytłumienia drgań przenoszonych z silników na elektronikę układu.
+
+Wersja 1.0 (Prototyp)
+[Software] Struktura regulatora (PID -> PD):** Zespół zdecydował o wyzerowaniu wzmocnienia członu całkującego (Ki = 0). Do stabilizacji odwróconego wahadła przy obecnej dynamice w zupełności wystarcza regulator PD. Wprowadzono blok kompensacji strefy nieczułości (DEAD_ZONE = 80), aby pokonać początkowe tarcie przekładni.
+[Hardware] Zastosowanie mostka Motoron I2C:** Zamiast klasycznego L298N użyto sterownika Pololu Motoron M2T550. Pozwoliło to przenieść komunikację na szynę I2C, oszczędzając piny i wprowadzając sprzętową blokadę Command Timeout (Fail-Safe przy zawieszeniu kodu).
+[Software] Odcięcie zasilania przy upadku:** Dodano maszynę stanów wyłączającą napęd PWM, gdy odchylenie kątowe przekracza 35 stopni.

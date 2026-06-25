@@ -1,0 +1,12 @@
+ID;Komponent;Parametry kluczowe;Ilosc;Dostawca/Link;Cena jednostkowa [PLN];Cena totalna [PLN];Uwagi
+1;Kolo napedowe;Srednica 65mm, wersje L i R;2;Botland;0.00;0.00;Zapas wlasny
+2;Silnik DC z przekladnia;Model 25GA-370, enkoder Halla;2;Mateusz Salamon (sklep);44.99;89.98;Enkodery obecnie nieuzywane w kodzie
+3;Sterownik silnikow;Pololu Motoron M2T550 Dual I2C;1;BTC Korporacja;79.90;79.90;Komunikacja I2C
+4;Zyroskop / IMU;Modul MPU6050;1;Mateusz Salamon;12.99;12.99;Komunikacja I2C
+5;Plytka PCB;Uniwersalna jednostronna 9x15 cm;1;Elektronika Plus;6.49;6.49;Zlutowane gniazda
+6;BMS / Ladowarka;BMS 4S 16.8V - 40A;1;LEDA Gurdek (Allegro);8.12;8.12;Zabezpiecza pakiet ogniw 4S
+7;Rama nosna (Druk 3D);Filament PLA;1;Wlasny druk PB;0.00;0.00;Wydruk: wypelnienie 40%
+8;Mikrokontroler;Arduino Nano (CH340);1;Mateusz Salamon;19.99;19.99;Wymaga kabla miniUSB
+9;Ogniwa Li-Ion;18650, 3.7V, min. 2000 mAh;4;LEDA Gurdek;8.12;32.47;Zlutowane w pakiet 4S
+10;Przelacznik;ON/OFF, 3A;1;Zapas wlasny;3.50;3.50;Odciecie glownego zasilania
+11;Elementy montazowe;Sruby M3, kable, goldpiny;1;Zapas wlasny;15.00;15.00;Do laczenia komponentow

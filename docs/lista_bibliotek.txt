@@ -1,0 +1,10 @@
+Aby poprawnie skompilować główny plik gyro_robot.ino w środowisku Arduino IDE, upewnij się, że posiadasz zainstalowane następujące biblioteki:
+
+1. Wire (autor: Arduino)
+   - Przeznaczenie: Komunikacja po magistrali I2C (odczyt z MPU-6050 oraz wysyłanie komend do mostka H).
+   - Jak zainstalować: Biblioteka wbudowana domyślnie w rdzeń Arduino. Nie wymaga pobierania.
+
+2. Motoron (autor: Pololu)
+   - Przeznaczenie: Obsługa rejestrów sterownika silników Pololu Motoron M2T550 Dual I2C Motor Controller.
+   - Jak zainstalować: W Arduino IDE wejdź w: Szkic -> Dołącz bibliotekę -> Zarządzaj bibliotekami... 
+     Wpisz w wyszukiwarkę "Motoron" i zainstaluj bibliotekę od Pololu.
